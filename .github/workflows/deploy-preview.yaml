@@ -2,7 +2,7 @@ name: Deploy Quartz site to GitHub Pages
 on:
   push:
     branches:
-      - v4
+      - v4  # <--- 반드시 v4여야 함
   workflow_dispatch:
 
 permissions:
@@ -19,14 +19,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24  # 최신 엔진으로 교체!
+          node-version: 24
+      - name: Update npm
+        run: npm install -g npm@latest
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
