@@ -1,14 +1,17 @@
-﻿name: Deploy Quartz site to GitHub Pages
+name: Deploy Quartz site to GitHub Pages
 on:
   push:
     branches:
-      - v4  # <--- 반드시 v4여야 함
-  workflow_dispatch:
+      - v4
+  workflow_dispatch: # 수동 실행 버튼 생성
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
