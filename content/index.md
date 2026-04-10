@@ -1,46 +1,78 @@
+---
+title: " "
+---
+
 <style>
-:root { --border: #444; --link: #58a6ff; --accent: #f1e05a; }
+  /* 시스템 타이틀 및 메타정보 완전 숨김 (중복 방지) */
+  .article-title, .content-meta, .breadcrumb-container { display: none !important; }
 
-/* 대문 거슬리는 요소 숨김 (시스템 타이틀 숨김) */
-.article-title, .content-meta, .breadcrumb-container { display: none !important; }
+  /* 최근 프로젝트 헤더 크기 조정 (중간 크기) */
+  .recent-header { font-size: 1.4em !important; font-weight: bold; margin-bottom: 10px; color: var(--accent); }
 
-/* 최근 프로젝트 */
-.recent-projects { background: #222; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--border); }
-.recent-title { font-size: 1.2em; color: var(--accent); margin-bottom: 15px; font-weight: bold; border-left: 4px solid var(--accent); padding-left: 10px; }
-.recent-projects ul { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding: 0; margin: 0; }
-.recent-projects li { background: #2d2d2d; padding: 10px; border-radius: 4px; border: 1px solid var(--border); text-align: center; margin: 0; }
-.recent-projects a { color: var(--link); text-decoration: none; font-weight: bold; }
-.recent-projects a:hover { color: var(--accent); text-decoration: underline; }
-.recent-projects a.internal.new { color: #777; pointer-events: none; font-style: italic; text-decoration: none; }
+  /* 문서에 없는 철학자 링크 회색 처리 (Quartz 전용) */
+  a.internal.new { 
+    color: #888888 !important; 
+    pointer-events: none !important; 
+    text-decoration: none !important; 
+    font-style: italic;
+    opacity: 0.6;
+  }
+  
+  /* 문서에 있는 철학자 링크 색상 */
+  a.internal { color: #58a6ff !important; text-decoration: none; }
+  a.internal:hover { text-decoration: underline; color: #f1e05a !important; }
+</style>
 
-/* 목차 */
-.custom-toc { background: #1e1e1e; padding: 20px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 40px; }
-.custom-toc p { font-size: 1.2em; font-weight: bold; color: #fff; margin-top: 0; margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-.custom-toc ul { list-style: none; padding-left: 0; margin: 0; display: block; }
-.custom-toc li { margin-bottom: 10px; font-size: 1.1em; display: block; background: none; border: none; padding: 0; text-align: left; }
-.custom-toc a { color: var(--link) !important; text-decoration: none !important; pointer-events: auto !important; font-style: normal !important; font-weight: bold; }
-.custom-toc a:hover { color: var(--accent) !important; }
+# 철학 세미나
 
-/* 나무위키 스타일 표 컨테이너 */
-.namu-container { border: 1px solid var(--border); font-size: 13px; line-height: 1.5; margin-bottom: 30px; }
-.namu-header { background: #000; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 1.3em; border-bottom: 1px solid var(--border); }
-.namu-tabs { display: flex; background: #1f2023; border-bottom: 1px solid var(--border); }
-.namu-tab { flex: 1; padding: 10px; text-align: center; cursor: pointer; color: #ccc; background: #2c2c2c; border: 1px solid #545454; font-weight: bold; transition: 0.2s; }
-.namu-tab.active { color: #ff0; background: #545454; }
+<div class="recent-header">🌟 최근 프로젝트</div>
 
-/* 표 본체 디자인 */
-.namu-table { width: 100%; border-collapse: collapse; display: none; background: transparent; }
-.namu-table.active { display: table; }
-.namu-table th { background: #000; color: #fff; padding: 8px; border: 1px solid var(--border); text-align: center; }
-.namu-table td.cat { background: #545454; color: #fff; width: 22%; text-align: center; font-weight: bold; border: 1px solid var(--border); padding: 6px; }
-.namu-table td.items { border: 1px solid var(--border); padding: 6px 10px; color: #ddd; }
-.namu-table td.highlight { background: #2f2f2f; text-align: center; font-weight: bold; border: 1px solid var(--border); padding: 8px; }
-.sub-txt { font-size: 0.85em; color: #aaa; margin-right: 4px; font-weight: bold; }
+- [[앙리 베르그송]]
+- [[들뢰즈]]
+- [[바슐라르]]
+- [[리오타르]]
 
-/* 표 내부의 위키링크 회색화 마법 */
-.namu-table a.internal { color: var(--link); text-decoration: none; }
-.namu-table a.internal:hover { text-decoration: underline; }
-.namu-table a.internal.new { color: #777; pointer-events: none; font-style: italic; }
+> [!info] 📚 목차
+> - [1. 역사적 철학사](#1-역사적-철학사)
+> - [2. 계보학적 철학사](#2-계보학적-철학사)
+> - [3. 미학적 철학사](#3-미학적-철학사)
 
-/* 본문 제목 */
-.big-title { font-size: 2em; font-weight: 900; margin-top:
+---
+
+# 1. 역사적 철학사
+
+> [!abstract]- 🏛️ 고대 철학 (클릭해서 펼치기)
+> | 구분 | 학파 및 주요 철학자 |
+> | :--- | :--- |
+> | **소크라테스 이전** | **밀레투스학파:** [[탈레스]] · [[아낙시만드로스]] · [[아낙시메네스]] · [[헤라클레이토스]]<br>**피타고라스학파:** [[피타고라스]] · [[필롤라오스]]<br>**엘레아학파:** [[크세노파네스]] · [[파르메니데스]] · [[엘레아의 제논\|제논]] · [[멜리소스]]<br>**다원론:** [[엠페도클레스]] · [[아낙사고라스]]<br>**원자론:** [[레우키포스]] · [[데모크리토스]] |
+> | **아테네 철학** | **소피스트:** [[프로타고라스]] · [[고르기아스]] · [[히피아스]] · [[프로디코스]] · [[트라시마코스]] · [[칼리클레스]] · [[안티폰]]<br>**[[소크라테스]] · [[플라톤]] · [[아리스토텔레스]]** |
+> | **헬레니즘·로마** | **키니코스학파:** [[안티스테네스]] · [[디오게네스]]<br>**스토아학파:** [[키티온의 제논\|제논]] · [[클레안테스]] · [[크리시포스]] · [[세네카]] · [[에픽테토스]] · [[마르쿠스 아우렐리우스\|아우렐리우스]] / 절충론: [[키케로]]<br>**에피쿠로스학파:** [[에피쿠로스]] · [[루크레티우스]]<br>**회의주의:** [[피론]] · [[아이네시데모스]] · [[섹스투스 엠피리쿠스\|엠피리쿠스]]<br>**신플라톤주의:** [[플로티누스]] · [[포르피리오스]] · [[이암블리코스]] · [[프로클로스]] |
+
+> [!abstract]- ⛪ 중세 철학 (클릭해서 펼치기)
+> | 구분 | 학파 및 주요 철학자 |
+> | :--- | :--- |
+> | **교부 철학** | **알렉산드리아:** [[클레멘스]] · [[오리게네스]] / **아프리카:** [[테르툴리아누스]]<br>**라틴:** [[암브로시우스]] · [[보에티우스]]<br>**[[아우구스티누스]]**<br>**신플라톤:** [[위 디오니시우스\|위디오니시우스]] · [[미하일 프셀로스\|프셀로스]] |
+> | **스콜라 철학** | **초기:** [[에리우게나]] · [[안셀무스]] · [[아벨라르]]<br>**이슬람:** [[알파라비]] · [[이븐 시나]] · [[알가잘리]] · [[이븐 루시드]]<br>**유대:** [[이븐 가비롤]] · [[마이모니데스]]<br>**도미니코:** [[알베르투스 마그누스\|알베르투스]] · **[[토마스 아퀴나스\|아퀴나스]]**<br>**프란치스코:** [[보나벤투라]] · [[둔스 스코투스\|스코투스]] · [[오컴의 윌리엄\|오컴]]<br>**신비주의:** [[마이스터 에크하르트\|에크하르트]] · [[니콜라우스 쿠자누스\|쿠자누스]] |
+
+> [!abstract]- ⚙️ 근대 철학 (클릭해서 펼치기)
+> | 구분 | 학파 및 주요 철학자 |
+> | :--- | :--- |
+> | **16-18세기** | **르네상스:** [[에라스뮈스]] · [[토머스 모어\|모어]] · [[니콜로 마키아벨리\|마키아벨리]] · [[몽테뉴]] · [[브루노]]<br>**합리주의:** [[데카르트]] · [[스피노자]] · [[라이프니츠]]<br>**경험주의:** [[베이컨]] · [[홉스]] · [[로크]] · [[버클리]] · [[흄]] · [[애덤 스미스\|스미스]]<br>**계몽주의:** [[몽테스키외]] · [[볼테르]] · [[디드로]] · [[장 자크 루소\|루소]]<br>**[[임마누엘 칸트\|칸트]]** / [[신칸트주의]] |
+> | **19세기** | **독일 관념론:** [[피히테]] · [[셸링]] · [[요한 고트프리트 헤르더\|헤르더]] · [[에머슨]]<br>**[[헤겔]]** / 청년 헤겔학파: [[포이어바흐]] · [[막스 슈티르너\|슈티르너]]<br>**공리/실증:** [[벤담]] · [[존 스튜어트 밀\|밀]] · [[오귀스트 콩트\|콩트]] · [[막스 베버\|베버]]<br>**사회주의:** [[프루동]] · [[바쿠닌]] · **[[카를 마르크스\|마르크스]] · [[프리드리히 엥겔스\|엥겔스]]**<br>**비합리주의:** [[키르케고르]] · [[쇼펜하우어]] · **[[프리드리히 니체\|니체]]** |
+
+> [!abstract]- 💡 현대 철학 (클릭해서 펼치기)
+> | 구분 | 학파 및 주요 철학자 |
+> | :--- | :--- |
+> | **현상/실존/해석** | [[에드문트 후설\|후설]] · [[마르틴 하이데거\|하이데거]] · [[에마뉘엘 레비나스\|레비나스]] · [[앙리 베르그송\|베르그송]]<br>**[[장폴 사르트르\|사르트르]]** · [[시몬 드 보부아르\|보부아르]] · [[메를로-퐁티]] · [[알베르 카뮈\|카뮈]]<br>[[가다머]] · [[폴 리쾨르\|리쾨르]] · [[한스 블루멘베르크\|블루멘베르크]] |
+> | **구조/포스트/마르크스** | [[소쉬르]] · [[라캉]] · [[레비스트로스]] · **[[미셸 푸코\|푸코]]** · [[질 들뢰즈\|들뢰즈]]<br>[[장프랑수아 리오타르\|리오타르]] · [[자크 데리다\|데리다]] · [[슬라보예 지젝\|지젝]]<br>[[그람시]] · [[루이 알튀세르\|알튀세르]] · [[안토니오 네그리\|네그리]] · [[바디우]] |
+> | **분석/과학/정치** | [[러셀]] · [[루트비히 비트겐슈타인\|비트겐슈타인]] · [[콰인]] · [[솔 크립키\|크립키]] · [[존 설\|설]]<br>[[칼 포퍼\|포퍼]] · [[토머스 쿤\|쿤]] · [[가스통 바슐라르\|바슐라르]] · [[키틀러]]<br>[[존 롤스\|롤스]] · [[로버트 노직\|노직]] · [[마이클 샌델\|샌델]] · [[한나 아렌트\|아렌트]] · [[피터 싱어\|싱어]] |
+
+---
+
+# 2. 계보학적 철학사
+*(여기에 계보학적 철학사 내용을 채워주세요)*
+
+---
+
+# 3. 미학적 철학사
+*(여기에 미학적 철학사 내용을 채워주세요)*
