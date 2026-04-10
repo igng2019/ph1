@@ -3,18 +3,15 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "철학 세미나", // 여기서 제목이 변경됩니다.
-    enableGPA: false,
+    pageTitle: "철학 세미나",
+    enableSPA: true,
     enablePopovers: true,
-    analytics: { provider: "google", tagId: "G-XXXXX" },
+    analytics: null,
     locale: "ko-KR",
-    // quartz.config.ts 파일 수정
-configuration: configuration: {
-  pageTitle: "철학 세미나",
-  baseUrl: "igng2019.github.io/ph1",  // <--- 뒤에 있던 -, 를 지우고 쉼표(,)만 남깁니다!
-  ignorePatterns: ["private", "templates", ".obsidian"],
-  defaultDateType: "created",
-  theme: {
+    baseUrl: "igng2019.github.io/ph1",
+    ignorePatterns: ["private", "templates", ".obsidian"],
+    defaultDateType: "created",
+    theme: {
 // ... 생략 ...{
 },
     ignorePatterns: ["private", "templates", ".obsidian"],
