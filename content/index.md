@@ -1,10 +1,10 @@
 <style>
 :root { --border: #444; --link: #58a6ff; --accent: #f1e05a; }
 
-/* 대문 거슬리는 요소 숨김 */
+/* 대문 거슬리는 요소 숨김 (시스템 타이틀 숨김) */
 .article-title, .content-meta, .breadcrumb-container { display: none !important; }
 
-/* 최근 프로젝트 (마크다운 리스트를 그리드로 변환) */
+/* 최근 프로젝트 */
 .recent-projects { background: #222; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--border); }
 .recent-title { font-size: 1.2em; color: var(--accent); margin-bottom: 15px; font-weight: bold; border-left: 4px solid var(--accent); padding-left: 10px; }
 .recent-projects ul { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding: 0; margin: 0; }
@@ -43,53 +43,4 @@
 .namu-table a.internal.new { color: #777; pointer-events: none; font-style: italic; }
 
 /* 본문 제목 */
-.big-title { font-size: 2em; font-weight: 900; margin-top: 60px; margin-bottom: 20px; border-bottom: 3px solid var(--border); padding-bottom: 10px; scroll-margin-top: 80px; }
-</style>
-
-<div class="recent-projects">
-  <div class="recent-title">최근 프로젝트</div>
-
-  - [[앙리 베르그송]]
-  - [[들뢰즈]]
-  - [[바슐라르]]
-  - [[리오타르]]
-
-</div>
-
-<div class="custom-toc">
-  <p>📚 목차</p>
-  <ul>
-    <li><a href="#section-1">1. 철학사</a></li>
-    <li><a href="#section-2">2. 미학사</a></li>
-    <li><a href="#section-3">3. 계보학</a></li>
-  </ul>
-</div>
-
-<h1 id="section-1" class="big-title">1. 철학사</h1>
-
-<div class="namu-container">
-    <div class="namu-header">서양 철학사 통합 인덱스</div>
-    
-    <div class="namu-tabs">
-        <div class="namu-tab active" onclick="showNamuTab(event, 'tab-ancient')">고대 철학</div>
-        <div class="namu-tab" onclick="showNamuTab(event, 'tab-medieval')">중세 철학</div>
-        <div class="namu-tab" onclick="showNamuTab(event, 'tab-modern')">근대 철학</div>
-        <div class="namu-tab" onclick="showNamuTab(event, 'tab-contemporary')">현대 철학</div>
-    </div>
-
-    <table id="tab-ancient" class="namu-table active">
-        <tr><th colspan="2">소크라테스 이전 철학</th></tr>
-        <tr><td class="cat">밀레투스학파</td><td class="items">[[탈레스]] · [[아낙시만드로스]] · [[아낙시메네스]] · [[헤라클레이토스]]</td></tr>
-        <tr><td class="cat">피타고라스학파</td><td class="items">[[피타고라스]] · [[필롤라오스]]</td></tr>
-        <tr><td class="cat">엘레아학파</td><td class="items">[[크세노파네스]] · [[파르메니데스]] · [[엘레아의 제논|제논]] · [[멜리소스]]</td></tr>
-        <tr><td class="cat">다원론</td><td class="items">[[엠페도클레스]] · [[아낙사고라스]]</td></tr>
-        <tr><td class="cat">원자론</td><td class="items">[[레우키포스]] · [[데모크리토스]]</td></tr>
-        <tr><th colspan="2">아테네 철학</th></tr>
-        <tr><td class="cat">소피스트</td><td class="items">[[프로타고라스]] · [[고르기아스]] · [[히피아스]] · [[프로디코스]] · [[트라시마코스]] · [[칼리클레스]] · [[안티폰]]</td></tr>
-        <tr><td colspan="2" class="highlight">[[소크라테스]] · [[플라톤]] · [[아리스토텔레스]]</td></tr>
-        <tr><th colspan="2">헬레니즘·로마 철학</th></tr>
-        <tr><td class="cat">키니코스학파</td><td class="items">[[안티스테네스]] · [[디오게네스]]</td></tr>
-        <tr><td class="cat">스토아학파</td><td class="items">[[키티온의 제논|제논]] · [[클레안테스]] · [[크리시포스]] · [[루키우스 안나이우스 세네카|세네카]] · [[에픽테토스]] · [[마르쿠스 아우렐리우스|아우렐리우스]] <span class="sub-txt">/ 절충론:</span> [[마르쿠스 툴리우스 키케로|키케로]]</td></tr>
-        <tr><td class="cat">에피쿠로스학파</td><td class="items">[[에피쿠로스]] · [[루크레티우스]]</td></tr>
-        <tr><td class="cat">회의주의</td><td class="items">[[피론]] · [[아이네시데모스]] · [[섹스투스 엠피리쿠스|엠피리쿠스]]</td></tr>
-        <tr><td class="cat">신플라톤주의</td><td class="items">[[플로티누
+.big-title { font-size: 2em; font-weight: 900; margin-top:
