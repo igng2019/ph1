@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "현대 좌파철학자 전체 비평.md",
+                "file": "content/이지용 개인작업/이지용 예술 개인작업/비평/미겔 우나무노/미겔 우나무노.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "현대 좌파철학자 전체 비평"
+              "title": "미겔 우나무노"
             }
           }
         ],
@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"share_link\"]",
+                "query": "path:우나무노",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -229,7 +229,6 @@
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
       "bases:새 베이스 생성하기": false,
-      "obsidian-to-notion:Share to notion": false,
       "templater-obsidian:Templater": false,
       "obsidian-importer:Open Importer": false,
       "3d-graph:3D Graph": false,
@@ -242,6 +241,8 @@
   },
   "active": "e25dd3a1e2e8c7bd",
   "lastOpenFiles": [
+    "content/이지용 개인작업/이지용 예술 개인작업/비평/미겔 우나무노/미겔 우나무노의 삶.md",
+    "현대 좌파철학자 전체 비평.md",
     "my-philosophy/node_modules/@parcel/watcher/node_modules/picomatch/lib/utils.js",
     "my-philosophy/node_modules/@parcel/watcher/node_modules/picomatch/lib/scan.js",
     "my-philosophy/node_modules/@parcel/watcher/node_modules/picomatch/lib/parse.js",
@@ -252,7 +253,6 @@
     "my-philosophy/node_modules/@parcel/watcher/src/windows/WindowsBackend.hh",
     "my-philosophy/node_modules/@parcel/watcher/src/windows/WindowsBackend.cc",
     "my-philosophy/node_modules/@parcel/watcher/src/wasm/WasmBackend.hh",
-    "my-philosophy/node_modules/@parcel/watcher/src/wasm/WasmBackend.cc",
     "my-philosophy/node_modules/@parcel/watcher/node_modules/picomatch/README.md",
     "my-philosophy/node_modules/@parcel/watcher-win32-x64/README.md",
     "my-philosophy/node_modules/@parcel/watcher/README.md",
@@ -277,7 +277,6 @@
     "my-philosophy/node_modules/@clack/prompts/README.md",
     "my-philosophy/node_modules/@clack/core/README.md",
     "my-philosophy/node_modules/@clack/core/CHANGELOG.md",
-    "content/학문/철학/철학사/철학/서양 철학/철학사/자율적 시대/근대철학/합리주의/비판철학/변증법적 구분/헤겔 셸링의 근대 철학사 구분/주관적 관념론/칸트/순수이성 비판/칸트/순수이성비판-백종현 역/초월적 요소론_초월적 논리학-초월논리학의 이념.md",
     "my-philosophy/docs/images/social-image-preview-light.png",
     "my-philosophy/docs/images/social-image-preview-dark.png",
     "my-philosophy/docs/images/quartz-layout-tablet.png",
