@@ -1,0 +1,45 @@
+// 1. 나무위키 스타일 색상 변수
+:root {
+  --namu-blue: #def1ff;
+  --namu-border: #ccc;
+  --namu-header: #555;
+}
+
+// 2. 표(Table) 나무위키 스타일로 변경
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1px solid var(--namu-border);
+
+  th {
+    background-color: var(--namu-blue); // 나무위키 특유의 하늘색 헤더
+    color: var(--namu-header);
+    border: 1px solid var(--namu-border);
+    padding: 8px;
+  }
+
+  td {
+    border: 1px solid var(--namu-border);
+    padding: 8px;
+  }
+}
+
+// 3. 미니멀 홈화면 (index.md에서만 특정 요소 숨기기)
+// Quartz는 홈화면 본문에 [data-slug="index"] 속성을 붙입니다.
+[data-slug="index"] {
+  .explorer, .graph, .backlinks { 
+    display: none !important; // 홈화면에서는 파일탐색기, 그래프, 백링크 숨김
+  }
+  
+  .center {
+    width: 100% !important; // 홈화면 본문을 더 넓게 사용
+  }
+}
+
+// 4. 강조(Highlight) 스타일
+mark {
+  background-color: var(--namu-blue);
+  padding: 0 0.2rem;
+  border-radius: 3px;
+}

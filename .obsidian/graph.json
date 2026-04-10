@@ -1,0 +1,86 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:학문/철학/노션페이지/철학사/비철학  ",
+      "color": {
+        "a": 1,
+        "rgb": 9115864
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/동양 철학\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 2756490
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/서양 철학/철학사/자율적 시대/근대철학\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 779531
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/서양 철학/철학사/자율적 시대/현대철학/현대 영미철학\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16514857
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/서양 철학/철학사/자율적 시대/현대철학/현대 대륙철학/현상학\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14715152
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/서양 철학/철학사/자율적 시대/현대철학/현대 대륙철학/구조주의/모더니즘\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16716820
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/서양 철학/철학사 전체 개괄\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 0
+      }
+    },
+    {
+      "query": "path:\"학문/철학/노션페이지/철학사/철학/서양 철학/철학사/자율적 시대/현대철학/현대 대륙철학/구조주의/포스트 모더니즘/국가 철학\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
+      }
+    },
+    {
+      "query": "path:학문/철학/노션페이지/철학사/비철학  ",
+      "color": {
+        "a": 1,
+        "rgb": 0
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -2,
+  "nodeSizeMultiplier": 1.25878378378378,
+  "lineSizeMultiplier": 2.00753638253638,
+  "collapse-forces": false,
+  "centerStrength": 0.36954261954262,
+  "repelStrength": 11.995841995842,
+  "linkStrength": 0.766112266112266,
+  "linkDistance": 60,
+  "scale": 0.059326171874999674,
+  "close": false
+}

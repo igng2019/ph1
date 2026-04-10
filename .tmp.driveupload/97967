@@ -1,0 +1,139 @@
+﻿@use "./base.scss";
+
+// 1. 나무위키 테마 변수
+:root {
+  --namu-blue: #def1ff;
+  --namu-border: #ccc;
+  --namu-header: #555;
+  --namu-text: #373a3c;
+}
+
+// 2. 전체 페이지 부드러운 스크롤 (하이퍼링크 클릭 시)
+html {
+  scroll-behavior: smooth;
+}
+
+// 3. 나무위키식 상단 목차(TOC) 박스 및 번호 자동 생성
+.toc {
+  background-color: #f9f9f9;
+  border: 1px solid var(--namu-border);
+  padding: 1.2rem;
+  display: inline-block;
+  min-width: 280px;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+
+  // '목차' 타이틀 부분
+  & > button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid var(--namu-border);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: default;
+    color: var(--namu-text);
+    
+    &::after {
+      content: " [숨기기]";
+      color: #0275d8;
+      font-size: 0.8rem;
+      font-weight: normal;
+    }
+  }
+
+  // 목차 리스트 하이퍼링크 및 번호(1.1, 1.2...) 생성
+  #toc-content ul {
+    list-style: none;
+    counter-reset: item; 
+    padding-left: 1.2rem;
+  }
+
+  #toc-content li {
+    display: block;
+    margin: 0.4rem 0;
+
+    &::before {
+      content: counters(item, ".") ". ";
+      counter-increment: item;
+      color: #777;
+      font-weight: bold;
+      margin-right: 0.4rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #0275d8;
+      &.active { color: var(--tertiary); }
+      &:hover { text-decoration: underline; }
+    }
+  }
+}
+
+// 4. 나무위키식 상위 문서(Breadcrumbs) 스타일
+.breadcrumbs {
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  color: #666;
+  &::before {
+    content: "상위 문서: ";
+    font-weight: bold;
+    color: var(--namu-header);
+  }
+  a { color: #0275d8; text-decoration: none; &:hover { text-decoration: underline; }}
+}
+
+// 5. 표(Table) 스타일
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1px solid var(--namu-border);
+  th {
+    background-color: var(--namu-blue);
+    border: 1px solid var(--namu-border);
+    padding: 10px;
+    color: var(--namu-header);
+  }
+  td {
+    border: 1px solid var(--namu-border);
+    padding: 10px;
+  }
+}
+
+// 6. [미니멀 홈화면] index.md에서만 불필요한 요소 숨기기
+[data-slug="index"] {
+  .explorer, .graph, .backlinks, .toc, .breadcrumbs { 
+    display: none !important; 
+  }
+  .center {
+    width: 100% !important;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+// 7. 관련 문서(Backlinks) 강조
+.backlinks {
+  border-top: 2px solid var(--namu-blue);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    &::before { content: "🔗 "; }
+  }
+}
+
+// 4. 강조(Highlight) 스타일
+mark {
+  background-color: var(--namu-blue);
+  padding: 0 0.2rem;
+  border-radius: 3px;
+}
