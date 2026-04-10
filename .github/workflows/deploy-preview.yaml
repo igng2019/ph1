@@ -1,37 +1,35 @@
-name: Upload Preview Deployment
+name: Deploy Quartz site to GitHub Pages
 on:
-  workflow_run:
-    workflows: ["Build Preview Deployment"]
-    types:
-      - completed
-
+  push:
+    branches:
+      - v4
 permissions:
-  actions: read
-  deployments: write
   contents: read
-  pull-requests: write
-
+  pages: write
+  id-token: write
 jobs:
-  deploy-preview:
-    if: ${{ github.repository == 'jackyzha0/quartz' && github.event.workflow_run.conclusion == 'success' }}
+  build:
     runs-on: ubuntu-latest
-    name: Deploy Preview to Cloudflare Pages
     steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v7
-        id: preview-build-artifact
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          name: preview-build
-          path: build
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event.workflow_run.id }}
-
-      - name: Deploy to Cloudflare Pages
-        uses: AdrianGonz97/refined-cf-pages-action@v1
+          node-version: 20
+      - name: Build Quartz
+        run: npx quartz build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: quartz
-          deploymentName: Branch Preview
-          directory: ${{ steps.preview-build-artifact.outputs.download-path }}
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
